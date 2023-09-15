@@ -8,7 +8,7 @@ By: Andrew Mullen
 
 ## Purpose:
 
-Demonstrate the ability to run a Jenkins build and manually deploy to Elastic Beanstalk
+Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instance
 
 ## Steps:
 
