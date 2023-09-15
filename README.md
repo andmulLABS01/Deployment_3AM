@@ -32,20 +32,16 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 
 ### 3. Follow the install AWS EB CLI instructions
 
-- This is where run commands to automatically create the ELB instance that our application will run on
-    - Using credentials
-- The Build Stage built the environment for the application to run
-    - See Troubleshooting for errors and resolution
-- The Test Stage performed tests and found no errors
-- The Packaging Stage, after receving confimation, zipped the files
+- This is where we run commands to automatically create the ELB instance that our application will run on
+    - Follow the directions [here:](https://scribehow.com/shared/How_to_install_AWS_EB_CLI__J6eBRB9FQl2fGenfUVemlA)
 
-### 4. Add 'Deploy' stage to the Jenkins file in Jenkins
+### 4. Add the 'Deploy' stage to the Jenkins file in Jenkins
 
 - In Jenkins
     - Open the Jenkinsfile.
 	- Add the following 
 	 - `stage ('Deploy') { steps { sh '/var/lib/jenkins/.local/bin/eb deploy' } }`
-	- Rerun the build
+    - Rerun the build
 
 ### 5. If redeployed successfully to Elastic Beanstalk, what changed?
 
