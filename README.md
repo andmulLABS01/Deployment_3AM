@@ -14,7 +14,7 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 
 ### 1. Create your own Jenkins Server and install the following on the server:
    - Install "python3.10-venv"
-   - Install "python-pip"
+   - Install "python3-pip"
    - Install "unzip"
 
 ### 2. Create a multibranch pipeline and run the build for the application
@@ -34,6 +34,10 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 
 - This is where we run commands to automatically create the ELB instance that our application will run on
     - Follow the directions [here:](https://scribehow.com/shared/How_to_install_AWS_EB_CLI__J6eBRB9FQl2fGenfUVemlA)
+- Assign IAM Role
+- 
+
+
 
 ### 4. Add the 'Deploy' stage to the Jenkins file in Jenkins
 
@@ -53,17 +57,17 @@ To view the diagram of the system design/deployment pipeline, click [HERE](https
 
 ## Issues/Troubleshooting:
 
-Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instance
+### Issue: 1
+ERROR   Unable to assign role. Please verify that you have permission to pass this role: aws-elasticbeanstalk-service-role.\n
+ERROR   Failed to launch environment.\n
+ERROR: ServiceError - Failed to launch environment.\n
 
 Resolution Steps:
-- Check the Console Output in Jenkins
-  - Click the Build, Console output
-- Discovered the following:
-  - Python3.10-venv not installed
-  - ensurepip not available
-- Installed Python3.10-venv on the terminal
-  - `sudo apt install python3.10-venv`
-- Rerun Jenkins build and was successful 
+- In the navigation pane, choose Instances.
+- Select the instance, choose Actions, Security, Modify IAM role.
+- Select the IAM role to attach to your instance, and choose Save.
+
+### Issue: 2
 
 
 ![alt text](https://github.com/andmulLABS01/Deployment_2AM/blob/main/dp2_error.PNG)
