@@ -48,6 +48,11 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 
 ### 5. If redeployed successfully to Elastic Beanstalk, what changed?
 
+- When the application deployed again the following was updated:
+    - Changes to GitHub were listed in Jenkins Status changes
+    -  The additional stage Deploy was added to the stage view
+    -  The Deploy stage activates a shell script that uploads the contents of the application '/var/lib/jenkins/.local/bin/' folder to the ELB instance. 
+
 
 
 ## System Diagram:
