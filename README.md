@@ -59,16 +59,18 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
     	-`http:InstanceIP.com:Port#/github-webhook/`
     - Then Add Webhook to save
     - Next, you will need to check if it was configured correctly by selecting
-    	- Recent Deliveries 
+    	- Recent Deliveries
+     - [Webhooks](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Webhooks.PNG)
 
 ### 7. BONUS: Once you've configured your webhook, change the background or some text in the application. 
-- I modified the text in the home.html file on Github.
+- I modified the text in the home.html file on GitHub.
 
 ### 8. Did the application redeploy?
-- Yes the application was redeployed:
- - Jenkens pulled in the new commits in Github [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Depoyment3.drawio.png)
- - Followed the steps in the Jenkins file [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Depoyment3.drawio.png)
- - Deployed the updated information [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Depoyment3.drawio.png)
+- Yes the application was redeployed and Jenkens pulled in the new commits on GitHub 
+ - Followed the steps in the Jenkins file [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/StageView.PNG)
+ - Deployed the updated information
+    - [BEFORE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/BeforeEdit.PNG)
+    - [AFTER](https://github.com/andmulLABS01/Deployment_3AM/blob/main/AfterEdit.PNG)
 
 ## System Diagram:
 
