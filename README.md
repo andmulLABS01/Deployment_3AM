@@ -74,7 +74,7 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 
 ## System Diagram:
 
-To view the diagram of the system design/deployment pipeline, click [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Depoyment3.drawio.png)
+To view the diagram of the system design/deployment pipeline, click [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Depoyment3.drawio%20(1).png)
 
 ## Issues/Troubleshooting:
 
