@@ -13,8 +13,8 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 ## Steps:
 
 ### 1. Create your own Jenkins Server and install the following on the server:
-   - Install "python3.10-venv" - Needed for the Test Stage in Jenkins
-   - Install "python3-pip"
+   - Install "python3.10-venv" - Needed to set up the Build Stage in Jenkins
+   - Install "python3-pip" - Needed to set up the Build Stage in Jenkins
    - Install "unzip" - Needed to unzip files 
 
 ### 2. Create a multibranch pipeline and run the build for the application
@@ -80,7 +80,9 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 To view the diagram of the system design/deployment pipeline, click [HERE](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Depoyment3.drawio%20(1).png)
 
 ## Issues/Troubleshooting:
-
+Yes one issue happend when I posted my private key information on GitHub and AWS flagged my account.
+  - This issue cause my account to be locked and I could not finish my deployment.
+  - To resolve the issue I had to have the Kura admins reset my account permissions and delete my compromised private key.
 
 ## Conclusion:
 
