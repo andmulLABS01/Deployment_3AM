@@ -13,9 +13,9 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
 ## Steps:
 
 ### 1. Create your own Jenkins Server and install the following on the server:
-   - Install "python3.10-venv"
+   - Install "python3.10-venv" - Needed for the Test Stage in Jenkins
    - Install "python3-pip"
-   - Install "unzip"
+   - Install "unzip" - Needed to unzip files 
 
 ### 2. Create a multibranch pipeline and run the build for the application
 - Jenkins is the main tool used in this deployment for pulling the program from the GitHub repository. Then building and testing the files to be deployed to Elastic Beanstalk.
@@ -52,18 +52,21 @@ Demonstrate the ability to deploy to a fully automated Elastic Beanstalk instanc
     - The Deploy stage activates a shell script that uploads the contents of the application '/var/lib/jenkins/.local/bin/' folder to the ELB instance. 
 
 ### 6. Configure a Webhook in Github
-- In settings on the main repo page
-    - Click 'Webhooks'
-    - Add Webhook
-    - In the Payload URL field enter
-    	-`http:InstanceIP.com:Port#/github-webhook/`
-    - Then Add Webhook to save
-    - Next, you will need to check if it was configured correctly by selecting
-    	- Recent Deliveries
-     - [Webhooks](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Webhooks.PNG)
+- Putting a Webhook in place automatically deploy updates to Jenkins that will be pushed to the ELB instance
+	- In settings on the main repo page
+	    - Click 'Webhooks'
+	    - Add Webhook
+	    - In the Payload URL field enter
+	    	-`http:InstanceIP.com:Port#/github-webhook/`
+	    - Then Add Webhook to save
+	    - Next, you will need to check if it was configured correctly by selecting
+	    	- Recent Deliveries
+	     - [Webhooks](https://github.com/andmulLABS01/Deployment_3AM/blob/main/Webhooks.PNG)
 
 ### 7. BONUS: Once you've configured your webhook, change the background or some text in the application. 
 - I modified the text in the home.html file on GitHub.
+	- Under the File section
+	- Changed the following text "Website URL" to all CAPS "WEBSITE URL"
 
 ### 8. Did the application redeploy?
 - Yes the application was redeployed and Jenkens pulled in the new commits on GitHub 
